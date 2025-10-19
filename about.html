@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- filepath: vscode-vfs://github/vaguemaxxing/Profe2_Website/about.html -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About — Retro Rewind</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<style>
+		/* minimal shared styles */
+		body { font-family: 'Inter', sans-serif; background: #0a0a14; color: #e0e0ff; }
+		h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
+		.glow-box{ background: rgba(15,15,30,0.85); border-radius:8px; padding:1.5rem; }
+		.neon-text{ color: #00f3ff; text-shadow: 0 0 10px #00f3ff; }
+		/* hide tape reels if any */
+		.tape-reel{ display:none; }
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(10,10,20,0.9);">
+		<div class="container">
+			<a class="navbar-brand neon-text" href="index.html">RETRO REWIND</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+					<li class="nav-item"><a class="nav-link active" href="about.html">ABOUT</a></li>
+					<li class="nav-item"><a class="nav-link" href="interests.html">INTERESTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="py-5" style="padding-top:100px;">
+		<div class="container">
+			<h2 class="neon-text">ABOUT ME</h2>
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<div class="glow-box">
+						<div class="row">
+							<div class="col-md-4 text-center mb-4">
+								<div style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:16px;">
+									<!-- simplified visual instead of tape reel -->
+									<img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="retro" class="img-fluid rounded">
+									<h5 style="color:#b300ff;margin-top:12px;">WEB DEVELOPER</h5>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<h3 style="color:#ff00c8;">The Mind Behind the Screen</h3>
+								<p>I'm a passionate front-end developer with a love for all things retro. My journey began with classic video games and 80s sci-fi, which heavily influences my design aesthetic today.</p>
+								<p>When I'm not coding, you can find me exploring new technologies, collecting vintage media, or creating digital art inspired by cyberpunk and cassette futurism.</p>
+								<div class="mt-4">
+									<span class="badge bg-dark me-2 mb-2">HTML/CSS</span>
+									<span class="badge bg-dark me-2 mb-2">JavaScript</span>
+									<span class="badge bg-dark me-2 mb-2">Bootstrap</span>
+									<span class="badge bg-dark me-2 mb-2">UI/UX Design</span>
+									<span class="badge bg-dark me-2 mb-2">Responsive Design</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer style="background:#05050c;color:#e0e0ff;padding:2rem 0;">
+		<div class="container text-center">&copy; 2023 Retro Rewind</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Rewind | Personal Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-blue: #00f3ff;
@@ -16,10 +16,11 @@
             --panel-bg: rgba(15, 15, 30, 0.85);
         }
         
+        /* typography: headings retain vibe, body is more readable */
         body {
             background-color: var(--dark-bg);
             color: #e0e0ff;
-            font-family: 'Rajdhani', sans-serif;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             background-image: url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
@@ -27,60 +28,25 @@
             background-attachment: fixed;
             position: relative;
         }
-        
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(10, 10, 20, 0.9) 0%, rgba(5, 5, 12, 0.85) 100%);
-            z-index: -1;
-        }
-        
-        .crt-effect::after {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: rgba(18, 16, 16, 0.1);
-            opacity: 0;
-            z-index: 999;
-            pointer-events: none;
-            animation: flicker 0.15s infinite;
-        }
-        
-        @keyframes flicker {
-            0% { opacity: 0.1; }
-            5% { opacity: 0.1; }
-            10% { opacity: 0.2; }
-            15% { opacity: 0.3; }
-            20% { opacity: 0.4; }
-            25% { opacity: 0.5; }
-            30% { opacity: 0.6; }
-            35% { opacity: 0.7; }
-            40% { opacity: 0.8; }
-            45% { opacity: 0.9; }
-            50% { opacity: 1; }
-            55% { opacity: 0.9; }
-            60% { opacity: 0.8; }
-            65% { opacity: 0.7; }
-            70% { opacity: 0.6; }
-            75% { opacity: 0.5; }
-            80% { opacity: 0.4; }
-            85% { opacity: 0.3; }
-            90% { opacity: 0.2; }
-            95% { opacity: 0.1; }
-            100% { opacity: 0; }
-        }
-        
+
         h1, h2, h3, h4, h5 {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
+        }
+
+        /* Hide circular "tape reel" visuals site-wide (removes circle things) */
+        .tape-reel {
+            display: none;
+        }
+
+        /* hero image styling */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,243,255,0.12);
+            border: 1px solid rgba(255,255,255,0.04);
+            object-fit: cover;
         }
         
         .neon-text {
@@ -136,24 +102,6 @@
         .cassette-tape:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 25px rgba(0, 243, 255, 0.3);
-        }
-        
-        .tape-reel {
-            width: 60px;
-            height: 60px;
-            border: 3px solid var(--neon-blue);
-            border-radius: 50%;
-            position: relative;
-            margin: 15px auto;
-            background: 
-                radial-gradient(circle at 30% 30%, rgba(0, 243, 255, 0.3) 0%, transparent 60%),
-                repeating-conic-gradient(from 0deg, #0a0a14 0deg 10deg, rgba(0, 243, 255, 0.1) 10deg 20deg);
-            animation: spin 20s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
         
         .navbar {
@@ -344,52 +292,32 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
         }
-        
-        .scan-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
-            background-size: 100% 4px;
-            pointer-events: none;
-            z-index: 999;
-            animation: scan 8s linear infinite;
-        }
-        
-        @keyframes scan {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
     </style>
 </head>
-<body class="crt-effect">
-    <div class="scan-line"></div>
-    
+<body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand neon-text" href="#">RETRO REWIND</a>
+            <a class="navbar-brand neon-text" href="index.html">RETRO REWIND</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">HOME</a>
+                        <a class="nav-link" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT</a>
+                        <a class="nav-link" href="about.html">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#interests">INTERESTS</a>
+                        <a class="nav-link" href="interests.html">INTERESTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">PROJECTS</a>
+                        <a class="nav-link" href="projects.html">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
+                        <a class="nav-link" href="contact.html">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -404,14 +332,11 @@
                     <h1 class="display-3 fw-bold mb-4 glitch" data-text="RETRO REWIND">RETRO REWIND</h1>
                     <h2 class="h3 neon-pink mb-4">A Personal Journey Through Time & Tech</h2>
                     <p class="lead mb-5">Welcome to my digital playground where retro aesthetics meet modern web development. Explore my interests, projects, and passions through the nostalgic lens of cassette tapes and cyberpunk vibes.</p>
-                    <a href="#about" class="btn btn-neon btn-lg pulse">EXPLORE MY WORLD</a>
+                    <a href="about.html" class="btn btn-neon btn-lg pulse">EXPLORE MY WORLD</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <div class="cassette-tape mx-auto" style="max-width: 300px;">
-                        <div class="tape-reel"></div>
-                        <h4 class="neon-text mt-3">PERSONAL MIXTAPE</h4>
-                        <p class="mb-0">A curated selection of my interests and creations</p>
-                    </div>
+                    <!-- replaced cassette visual with a clear hero image from Unsplash -->
+                    <img class="hero-image" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80" alt="retro hero image">
                 </div>
             </div>
         </div>

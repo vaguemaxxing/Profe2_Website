@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interests — Retro Rewind</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<style>
+		body{ background:#0a0a14;color:#e0e0ff;font-family:'Inter',sans-serif; }
+		h2{ font-family:'Space Grotesk',sans-serif; }
+		.cassette-tape{ background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:20px;color:#e0e0ff; }
+		.tape-reel{ display:none; }
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(10,10,20,0.9);">
+		<div class="container">
+			<a class="navbar-brand neon-text" href="index.html">RETRO REWIND</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+					<li class="nav-item"><a class="nav-link active" href="interests.html">INTERESTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main style="padding-top:100px;">
+		<div class="container py-5">
+			<h2 class="neon-text">MY INTERESTS</h2>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="cassette-tape p-4 h-100">
+						<h4 class="neon-text">RETRO GAMING</h4>
+						<p>From 8-bit classics to PS1 era gems, I appreciate the artistry and innovation of vintage games.</p>
+						<img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367e?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded" alt="retro gaming">
+					</div>
+				</div>
+				<!-- ...other interest cards mirrored from index, with images replacing tape reels... -->
+			</div>
+		</div>
+	</main>
+
+	<footer style="background:#05050c;padding:2rem 0;color:#e0e0ff;"><div class="container text-center">&copy; 2023 Retro Rewind</div></footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
