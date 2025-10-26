@@ -190,10 +190,217 @@
 				<div id="inventory" class="diagram">
 					<h2 class="h4 mb-4">Level 2 DFD - Inventory Process</h2>
 					<svg viewBox="0 0 1600 1100" class="w-100">
-						<!-- Copy the entire SVG content from DFDProcess2Explosion here -->
-						<!-- ...SVG content... -->
-					</svg>
-				</div>
+                        <!-- Arrow marker definition -->
+                        <defs>
+                            <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="#374151" />
+                            </marker>
+                        </defs>
+
+                        <!-- External Entities -->
+                        <rect x="50" y="250" width="140" height="80" fill="#3B82F6" stroke="#1E40AF" stroke-width="2" rx="5"/>
+                        <text x="120" y="295" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Manager</text>
+
+                        <!-- Supplier -->
+                        <rect x="1410" y="250" width="140" height="80" fill="#3B82F6" stroke="#1E40AF" stroke-width="2" rx="5"/>
+                        <text x="1480" y="295" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Supplier</text>
+
+                        <!-- Finance/Accounting -->
+                        <rect x="1410" y="700" width="140" height="80" fill="#3B82F6" stroke="#1E40AF" stroke-width="2" rx="5"/>
+                        <text x="1480" y="730" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Finance/</text>
+                        <text x="1480" y="750" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Accounting</text>
+
+                        <!-- Employees -->
+                        <rect x="50" y="700" width="140" height="80" fill="#3B82F6" stroke="#1E40AF" stroke-width="2" rx="5"/>
+                        <text x="120" y="745" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Employees</text>
+
+                        <!-- Process 1.0 -->
+                        <rect x="350" y="50" width="140" height="80" fill="#8B5CF6" stroke="#6D28D9" stroke-width="2" rx="5"/>
+                        <text x="420" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Process 1.0</text>
+                        <text x="420" y="105" text-anchor="middle" fill="white" font-size="13" font-weight="bold">(Sales)</text>
+
+                        <!-- Process 3.0 -->
+                        <rect x="1100" y="50" width="140" height="80" fill="#8B5CF6" stroke="#6D28D9" stroke-width="2" rx="5"/>
+                        <text x="1170" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Process 3.0</text>
+                        <text x="1170" y="105" text-anchor="middle" fill="white" font-size="13" font-weight="bold">(Reports)</text>
+
+                        <!-- Sub-Processes -->
+                        <!-- 2.1 Receive Order from Sales -->
+                        <circle cx="550" cy="290" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="550" y="275" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.1</text>
+                        <text x="550" y="295" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Receive Order</text>
+                        <text x="550" y="313" text-anchor="middle" fill="white" font-size="13" font-weight="bold">from Sales</text>
+
+                        <!-- 2.2 Prepare Food -->
+                        <circle cx="800" cy="290" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="800" y="280" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.2</text>
+                        <text x="800" y="300" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Prepare</text>
+                        <text x="800" y="318" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Food</text>
+
+                        <!-- 2.3 Track Ingredient Usage -->
+                        <circle cx="1050" cy="290" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="1050" y="270" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.3</text>
+                        <text x="1050" y="290" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Track</text>
+                        <text x="1050" y="308" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Ingredient</text>
+                        <text x="1050" y="326" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Usage</text>
+
+                        <!-- 2.4 Check Stock Levels -->
+                        <circle cx="800" cy="550" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="800" y="535" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.4</text>
+                        <text x="800" y="555" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Check Stock</text>
+                        <text x="800" y="573" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Levels</text>
+
+                        <!-- 2.5 Create Purchase Order -->
+                        <circle cx="1050" cy="550" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="1050" y="535" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.5</text>
+                        <text x="1050" y="555" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Create</text>
+                        <text x="1050" y="573" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Purchase Order</text>
+
+                        <!-- 2.6 Process Supplier Payment -->
+                        <circle cx="1300" cy="550" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="1300" y="530" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.6</text>
+                        <text x="1300" y="550" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Process</text>
+                        <text x="1300" y="568" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Supplier</text>
+                        <text x="1300" y="586" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Payment</text>
+
+                        <!-- 2.7 Receive & Update Inventory -->
+                        <circle cx="1050" cy="800" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="1050" y="780" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.7</text>
+                        <text x="1050" y="800" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Receive &</text>
+                        <text x="1050" y="818" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Update</text>
+                        <text x="1050" y="836" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Inventory</text>
+
+                        <!-- 2.8 Process Employee Payroll -->
+                        <circle cx="550" cy="800" r="85" fill="#10B981" stroke="#059669" stroke-width="3"/>
+                        <text x="550" y="785" text-anchor="middle" fill="white" font-size="16" font-weight="bold">2.8</text>
+                        <text x="550" y="805" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Process</text>
+                        <text x="550" y="823" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Employee</text>
+                        <text x="550" y="841" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Payroll</text>
+
+                        <!-- Data Stores -->
+                        <!-- D1 - Order Slip Storage -->
+                        <rect x="300" y="260" width="180" height="60" fill="white" stroke="#6B7280" stroke-width="2"/>
+                        <rect x="300" y="260" width="25" height="60" fill="#6B7280"/>
+                        <text x="400" y="295" text-anchor="middle" fill="#1F2937" font-size="13" font-weight="bold">D1: Order Slip Storage</text>
+
+                        <!-- D3 - Inventory Logbook -->
+                        <rect x="850" y="950" width="200" height="60" fill="white" stroke="#6B7280" stroke-width="2"/>
+                        <rect x="850" y="950" width="25" height="60" fill="#6B7280"/>
+                        <text x="965" y="977" text-anchor="middle" fill="#1F2937" font-size="13" font-weight="bold">D3: Inventory</text>
+                        <text x="965" y="995" text-anchor="middle" fill="#1F2937" font-size="13" font-weight="bold">Logbook</text>
+
+                        <!-- D4 - Employee Records -->
+                        <rect x="300" y="770" width="180" height="60" fill="white" stroke="#6B7280" stroke-width="2"/>
+                        <rect x="300" y="770" width="25" height="60" fill="#6B7280"/>
+                        <text x="400" y="797" text-anchor="middle" fill="#1F2937" font-size="13" font-weight="bold">D4: Employee</text>
+                        <text x="400" y="815" text-anchor="middle" fill="#1F2937" font-size="13" font-weight="bold">Records</text>
+
+                        <!-- Data Flows -->
+                        
+                        <!-- Process 1.0 to D1 -->
+                        <path d="M 420 130 L 380 260" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="350" y="190" fill="#1F2937" font-size="12" font-weight="600">Used Orders</text>
+
+                        <!-- D1 to 2.1 -->
+                        <path d="M 480 290 L 465 290" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="520" y="280" fill="#1F2937" font-size="11" font-weight="600">Order Info</text>
+
+                        <!-- 2.1 to 2.2 -->
+                        <path d="M 635 290 L 715 290" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="665" y="280" fill="#1F2937" font-size="12" font-weight="600">Food Order</text>
+
+                        <!-- 2.2 to Process 1.0 -->
+                        <path d="M 750 220 L 460 130" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="600" y="165" fill="#1F2937" font-size="12" font-weight="600">Prepared Food</text>
+
+                        <!-- 2.2 to 2.3 -->
+                        <path d="M 885 290 L 965 290" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="915" y="280" fill="#1F2937" font-size="11" font-weight="600">Ingredients Used</text>
+
+                        <!-- 2.3 to D3 -->
+                        <path d="M 1020 375 L 980 950" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="960" y="650" fill="#1F2937" font-size="12" font-weight="600">Usage Update</text>
+
+                        <!-- 2.3 to 2.4 -->
+                        <path d="M 1000 360 L 850 485" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="920" y="410" fill="#1F2937" font-size="12" font-weight="600">Consumption Data</text>
+
+                        <!-- D3 to 2.4 -->
+                        <path d="M 930 950 L 830 635" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="850" y="790" fill="#1F2937" font-size="11" font-weight="600">Current Stock</text>
+
+                        <!-- 2.4 to Manager -->
+                        <path d="M 720 530 L 190 310" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="420" y="410" fill="#1F2937" font-size="12" font-weight="600">Low Stock Alert</text>
+
+                        <!-- Manager to 2.5 -->
+                        <path d="M 190 300 L 980 510" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="550" y="390" fill="#1F2937" font-size="12" font-weight="600">Purchase Request</text>
+
+                        <!-- 2.5 to Supplier -->
+                        <path d="M 1135 540 L 1410 310" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1250" y="410" fill="#1F2937" font-size="12" font-weight="600">Purchase Order</text>
+
+                        <!-- 2.5 to 2.6 -->
+                        <path d="M 1135 550 L 1215 550" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1165" y="540" fill="#1F2937" font-size="11" font-weight="600">Payment Request</text>
+
+                        <!-- Finance to 2.6 -->
+                        <path d="M 1380 700 L 1330 635" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1340" y="660" fill="#1F2937" font-size="12" font-weight="600">Funds</text>
+
+                        <!-- 2.6 to Supplier -->
+                        <path d="M 1350 500 L 1450 330" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1370" y="400" fill="#1F2937" font-size="12" font-weight="600">Payment</text>
+
+                        <!-- Supplier to 2.7 -->
+                        <path d="M 1410 310 L 1110 745" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1240" y="510" fill="#1F2937" font-size="12" font-weight="600">Inventory Supplies</text>
+
+                        <!-- 2.7 to D3 -->
+                        <path d="M 1020 880 L 980 950" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1020" y="920" fill="#1F2937" font-size="11" font-weight="600">Stock Update</text>
+
+                        <!-- 2.7 to Process 3.0 -->
+                        <path d="M 1100 730 L 1150 130" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1110" y="420" fill="#1F2937" font-size="12" font-weight="600">Inventory Report</text>
+
+                        <!-- Manager to 2.8 -->
+                        <path d="M 190 730 L 465 780" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="300" y="745" fill="#1F2937" font-size="12" font-weight="600">Payroll Approval</text>
+
+                        <!-- D4 to 2.8 -->
+                        <path d="M 480 800 L 465 800" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="500" y="790" fill="#1F2937" font-size="11" font-weight="600">Employee Data</text>
+
+                        <!-- Finance to 2.8 -->
+                        <path d="M 1410 750 L 635 810" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="1000" y="770" fill="#1F2937" font-size="12" font-weight="600">Payroll Funds</text>
+
+                        <!-- 2.8 to Employees -->
+                        <path d="M 480 760 L 190 740" stroke="#374151" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <text x="320" y="740" fill="#1F2937" font-size="12" font-weight="600">Paycheck</text>
+
+                        <!-- Process boundary -->
+                        <rect x="250" y="150" width="1120" height="810" fill="none" stroke="#9CA3AF" stroke-width="3" stroke-dasharray="10,5" rx="10"/>
+                        <text x="810" y="135" text-anchor="middle" fill="#6B7280" font-size="18" font-weight="bold">Process 2.0 - Inventory Process</text>
+                    </svg>
+
+                    <!-- Process Description -->
+                    <div class="mt-4 p-4 bg-light rounded border">
+                        <h3 class="h5 mb-3">Process Flow Description</h3>
+                        <ol class="list-decimal ps-3">
+                            <li><strong>2.1 Receive Order from Sales:</strong> Kitchen staff retrieves order slips from queue</li>
+                            <li><strong>2.2 Prepare Food:</strong> Cook meals according to order specifications</li>
+                            <li><strong>2.3 Track Ingredient Usage:</strong> Record consumption of ingredients during food preparation</li>
+                            <li><strong>2.4 Check Stock Levels:</strong> Monitor inventory and alert manager when supplies run low</li>
+                            <li><strong>2.5 Create Purchase Order:</strong> Manager approves and creates orders for suppliers</li>
+                            <li><strong>2.6 Process Supplier Payment:</strong> Handle payment transactions for purchased supplies using funds from Finance</li>
+                            <li><strong>2.7 Receive & Update Inventory:</strong> Accept deliveries and update inventory records</li>
+                            <li><strong>2.8 Process Employee Payroll:</strong> Manager approves payroll, funds come from Finance, paychecks go to employees</li>
+                        </ol>
+                    </div>
+                </div>
 			</div>
 
 			<!-- Legend and Description -->
